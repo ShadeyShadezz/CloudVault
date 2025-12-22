@@ -1,0 +1,6 @@
+.panel { background: rgba(24,10,36,0.6); border-radius: 8px; padding: 1.5rem; max-width: 100%; }
+.label { color: var(--muted); font-size: 0.875rem; }
+.input { margin-top: 0.25rem; width: 100%; border-radius: 6px; background: rgba(255,255,255,0.03); padding: 0.5rem 0.75rem; color: #e6e9ff; }
+.btn { border-radius: 6px; background: linear-gradient(90deg,#3b6cff,#6ad1ff); color: #06102a; padding: 0.5rem 1rem; }
+.muted { color: var(--muted); }
+.text { color: #e6e9ff; }

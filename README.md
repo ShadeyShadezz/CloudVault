@@ -1,3 +1,37 @@
+# CloudVault
+
+CloudVault is a nighttime-themed import/export app designed to hold files of any kind — images, videos, 3D objects, PDFs and more — and make organization simple for students and creators.
+
+## Project overview
+- App name: CloudVault
+- Who benefits most: Students, creators, and professionals who manage mixed-media portfolios and files.
+
+## Problem summary
+Files are scattered across multiple platforms and formats. CloudVault aims to unify storage, provide tags and collections, and offer import/export bundles.
+
+## Features
+- Universal file support (MVP stores files client-side for demo)
+- Manual organization (tags, collections)
+- AI-assisted tag suggestions & content extraction (planned)
+
+## Tech stack
+- Next.js (app router)
+- React
+- Tailwind CSS (already present in project)
+
+## How to run
+1. Install dependencies: `npm install`
+2. Run dev server: `npm run dev`
+
+Note: This repo's product page stores files client-side (localStorage) for demo purposes. For production, add server-side storage.
+
+## Where to find CCC evidence
+- CCC.1.1: `app/about/page.tsx` + README section "Problem summary"
+- CCC.1.2: `app/why/page.tsx` and `project-plan.md` in repo
+- CCC.1.3: `app/features/page.tsx` and `app/product/page.tsx`
+
+## Reflection
+See `app/reflection/page.tsx` for notes on what went well, what didn’t, and next steps.
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

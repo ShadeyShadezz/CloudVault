@@ -1,0 +1,14 @@
+{
+  "columns": [
+    { "name": "Backlog", "cards": [
+      { "title": "Add tags & collections", "description": "Allow manual tagging and collections for files.", "start":"2026-01-06", "end":"2026-01-13", "checklist": ["UI", "Storage", "Tests"] }
+    ]},
+    { "name": "In Progress", "cards": [
+      { "title": "UI Foundation", "description": "Create pages, header, footer, theme.", "start":"2025-12-22", "end":"2026-01-05", "checklist": ["Layout","Pages","Styling"] }
+    ]},
+    { "name": "Blocked", "cards": []},
+    { "name": "Done", "cards": [
+      { "title": "README & Project Plan", "description": "Create README and project-plan.md", "start":"2025-12-22", "end":"2025-12-22", "checklist": ["Write README","Add plan"] }
+    ]}
+  ]
+}
