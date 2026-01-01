@@ -1,4 +1,26 @@
 import styles from "./page.module.css";
+'use client';
+
+import Link from 'next/link';
+import { useSession, signOut } from 'next-auth/react';
+import React from 'react';
+
+function LoginArea() {
+  const { data: session } = useSession();
+  if (session?.user) {
+    return (
+      <div className="flex items-center gap-4">
+        <span>Signed in as {session.user.email}</span>
+        <button onClick={() => signOut({ callbackUrl: '/' })} className="px-3 py-1 bg-red-600 rounded">Sign out</button>
+      </div>
+    );
+  }
+  return (
+    <Link href="/login" className="px-3 py-1 bg-blue-600 rounded">
+      Sign in
+    </Link>
+  );
+}
 
 export default function Home() {
   return (
@@ -22,6 +44,10 @@ export default function Home() {
           <h3 className={`font-semibold ${styles.textMain}`}>Quick start</h3>
           <p className={styles.textMuted}>Sign up and upload files in the Product page. This demo stores files client-side for prototyping.</p>
         </div>
+      </div>
+
+      <div className="mt-6">
+        <LoginArea />
       </div>
     </section>
   );
