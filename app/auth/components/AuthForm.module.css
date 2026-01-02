@@ -41,10 +41,6 @@
   opacity: 0.9;
 }
 
-.muted {
-  color: var(--muted);
-}
-
 .text {
   color: #e6e9ff;
 }

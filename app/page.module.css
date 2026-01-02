@@ -1,5 +1,28 @@
-.panel { background: linear-gradient(180deg, rgba(36,18,58,0.6), rgba(16,8,40,0.6)); border-radius: 8px; padding: 2rem; }
-.panelSub { background: rgba(24,10,36,0.6); border-radius: 6px; padding: 1rem; }
-.cta { background: linear-gradient(90deg,#3b6cff,#6ad1ff); color: #06102a; border-radius: 6px; padding: 0.5rem 1rem; }
-.textMuted { color: var(--muted); }
-.textMain { color: #e6e9ff; }
+.panel {
+  background: linear-gradient(180deg, rgba(36, 18, 58, 0.6), rgba(16, 8, 40, 0.6));
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.panelSub {
+  background: rgba(24, 10, 36, 0.6);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.cta {
+  background: linear-gradient(90deg, #3b6cff, #6ad1ff);
+  color: #06102a;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.textMuted {
+  color: var(--muted);
+}
+
+.textMain {
+  color: #e6e9ff;
+}

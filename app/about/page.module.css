@@ -1,2 +1,7 @@
-.textMain { color: #e6e9ff; }
-.textMuted { color: var(--muted); }
+.textMain {
+  color: #e6e9ff;
+}
+
+.textMuted {
+  color: var(--muted);
+}

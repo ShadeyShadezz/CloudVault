@@ -1,18 +1,17 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useSession } from "next-auth/react";
 import styles from "./Header.module.css";
-import { getCurrentUser, isInstructor } from "../lib/auth";
+
+const INSTRUCTOR_EMAILS = [
+  'rob@launchpadphilly.org',
+  'sanaa@launchpadphilly.org',
+  'taheera@launchpadphilly.org',
+];
 
 export default function Header() {
-  const [user, setUser] = useState<string | null>(null);
-  const [instructor, setInstructor] = useState(false);
-
-  useEffect(() => {
-    const u = getCurrentUser();
-    setUser(u);
-    setInstructor(isInstructor(u));
-  }, []);
+  const { data: session } = useSession();
+  const isInstructor = session?.user?.email && INSTRUCTOR_EMAILS.includes(session.user.email);
 
   return (
     <header className={`w-full ${styles.headerBorder} bg-transparent`}>
@@ -23,13 +22,13 @@ export default function Header() {
         </Link>
         <nav className={styles.nav}>
           <Link href="/about" className={styles.navLink}>About</Link>
-          <Link href="/why" className={styles.navLink}>Why</Link>
           <Link href="/features" className={styles.navLink}>Features</Link>
           <Link href="/product" className={styles.navLink}>Product</Link>
-          {instructor && <Link href="/rubric" className={styles.navLink}>Rubric</Link>}
-          {instructor && <Link href="/reflection" className={styles.navLink}>Reflection</Link>}
-          {user ? (
-            <Link href="/product" className={`ml-4 ${styles.cta}`}>{user}</Link>
+          <Link href="/why" className={styles.navLink}>Why</Link>
+          {isInstructor && <Link href="/rubric" className={styles.navLink}>Rubric</Link>}
+          {isInstructor && <Link href="/reflection" className={styles.navLink}>Reflection</Link>}
+          {session?.user ? (
+            <Link href="/account" className={`ml-4 ${styles.cta}`}>Account</Link>
           ) : (
             <Link href="/auth" className={`ml-4 ${styles.cta}`}>Sign in</Link>
           )}

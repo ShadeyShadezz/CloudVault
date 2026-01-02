@@ -1,21 +1,30 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import styles from "./page.module.css";
-import { getCurrentUser, isInstructor } from "../../lib/auth";
+
+const INSTRUCTOR_EMAILS = [
+  'rob@launchpadphilly.org',
+  'sanaa@launchpadphilly.org',
+  'taheera@launchpadphilly.org',
+];
 
 export default function ReflectionPage(){
-  const [authorized, setAuthorized] = useState(false);
-  const [checked, setChecked] = useState(false);
+  const { data: session, status } = useSession();
+  const router = useRouter();
 
-  useEffect(()=>{
-    const u = getCurrentUser();
-    setAuthorized(isInstructor(u));
-    setChecked(true);
-  },[]);
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      router.push("/auth");
+    }
+  }, [status, router]);
 
-  if (!checked) return null;
+  if (status === "loading") {
+    return <div className={styles.textMuted}>Loading...</div>;
+  }
 
-  if (!authorized) {
+  if (!session?.user?.email || !INSTRUCTOR_EMAILS.includes(session.user.email)) {
     return (
       <section className={`space-y-6 ${styles.textMain}`}>
         <h1 className="text-3xl font-bold">Reflection</h1>
@@ -25,20 +34,57 @@ export default function ReflectionPage(){
   }
 
   return (
-    <section className={`space-y-6 ${styles.textMain}`}>
-      <h1 className="text-3xl font-bold">Reflection</h1>
-      <h2 className="text-xl font-semibold">What went well</h2>
-      <p className={styles.textMuted}>Built a consistent UI, navigation and a demo product flow for client-side uploads.</p>
+    <section className={`space-y-8 ${styles.textMain}`}>
+      <div>
+        <h1 className="text-4xl font-bold mb-2">Project Reflection</h1>
+        <p className={styles.textMuted}>Self-assessment of CloudVault development and future direction.</p>
+      </div>
 
-      <h2 className="text-xl font-semibold">What didn't go well</h2>
-      <p className={styles.textMuted}>Storing very large files client-side is limited; server-side storage and streaming are needed for production.</p>
+      <div className={styles.reflectionBox}>
+        <div className={styles.reflectionIcon}>✓</div>
+        <h2 className={`text-2xl font-bold mb-4 ${styles.positive}`}>What Went Well</h2>
+        <p className={styles.textMuted}>
+          Built a consistent UI, navigation and a demo product flow for client-side uploads. 
+          Established clear architectural patterns and maintainable code structure.
+        </p>
+      </div>
 
-      <h2 className="text-xl font-semibold">What I'd build next</h2>
-      <ul className={`list-disc pl-6 ${styles.textMuted}`}>
-        <li>Server-backed storage (S3) with metadata DB</li>
-        <li>Authentication with NextAuth and OAuth providers</li>
-        <li>AI integration for tag suggestions and content extraction</li>
-      </ul>
+      <div className={styles.reflectionBox}>
+        <div className={`${styles.reflectionIcon} ${styles.negative}`}>⚠</div>
+        <h2 className={`text-2xl font-bold mb-4 ${styles.negative}`}>What Didn't Go Well / Challenges</h2>
+        <p className={styles.textMuted}>
+          Storing very large files client-side is limited; server-side storage and streaming are needed for production. 
+          Scalability is a significant constraint without proper backend infrastructure.
+        </p>
+      </div>
+
+      <div className={styles.reflectionBox}>
+        <div className={styles.reflectionIcon}>→</div>
+        <h2 className={`text-2xl font-bold mb-4 ${styles.future}`}>What I'd Build Next</h2>
+        <ul className={`${styles.buildList} ${styles.textMuted}`}>
+          <li>
+            <strong>Server-backed storage (S3)</strong> with metadata DB
+            <span className={styles.description}> — Enable scalable file handling and persistent storage</span>
+          </li>
+          <li>
+            <strong>OAuth providers</strong> (GitHub, Google)
+            <span className={styles.description}> — Simplify authentication for broader user adoption</span>
+          </li>
+          <li>
+            <strong>AI integration</strong> for tag suggestions and content extraction
+            <span className={styles.description}> — Enhance discoverability and reduce manual organization</span>
+          </li>
+        </ul>
+      </div>
+
+      <div className={styles.summaryBox}>
+        <h2 className={`text-lg font-semibold mb-3 ${styles.future}`}>Key Takeaways</h2>
+        <ul className={`${styles.takeawayList} ${styles.textMuted}`}>
+          <li>Full-stack architecture is essential for file-handling applications</li>
+          <li>User experience consistency drives engagement</li>
+          <li>MVP scope with clear future roadmap enables iterative improvement</li>
+        </ul>
+      </div>
     </section>
   );
 }

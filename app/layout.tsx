@@ -4,6 +4,7 @@ import "./globals.css";
 import layoutStyles from "./layout.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { Providers } from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,9 +31,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen ${layoutStyles.bgNightSky}`}
       >
-        <Header />
-        <main className="mx-auto w-full max-w-6xl px-6 py-8">{children}</main>
-        <Footer />
+        <Providers>
+          <Header />
+          <main className="mx-auto w-full max-w-6xl px-6 py-8">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

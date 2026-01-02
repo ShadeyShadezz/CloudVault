@@ -8,10 +8,11 @@
 .label {
   color: var(--muted);
   font-size: 0.875rem;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .input {
-  margin-top: 0.25rem;
   width: 100%;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.03);
@@ -19,11 +20,17 @@
   color: #e6e9ff;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: border-color 0.2s ease;
+  font-size: 1rem;
 }
 
 .input:focus {
   outline: none;
   border-color: rgba(90, 166, 255, 0.5);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .btn {
@@ -35,16 +42,26 @@
   cursor: pointer;
   transition: opacity 0.2s ease;
   border: none;
+  font-size: 0.875rem;
 }
 
-.btn:hover {
+.btn:hover:not(:disabled) {
   opacity: 0.9;
 }
 
-.muted {
-  color: var(--muted);
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .text {
   color: #e6e9ff;
+}
+
+.error {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  border-left: 3px solid #ff6b6b;
 }
