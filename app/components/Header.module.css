@@ -1,0 +1,78 @@
+.header {
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.headerContent {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 100%;
+  max-width: 96rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brandText {
+  color: #e6e9ff;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 216, 107, 0.18), transparent 40%);
+  color: #ffd86b;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.navLink {
+  color: #9aa0c6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #e6e9ff;
+}
+
+.ctaLink {
+  border-radius: 6px;
+  background: linear-gradient(90deg, #3b6cff, #6ad1ff);
+  padding: 6px 12px;
+  color: #06102a;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.ctaLink:hover {
+  opacity: 0.9;
+}
