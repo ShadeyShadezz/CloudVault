@@ -39,8 +39,8 @@ export default function AuthForm({ mode = "login" }: { mode?: "login" | "signup"
   };
 
   return (
-    <form onSubmit={submit} className={`mx-auto max-w-md space-y-4 ${styles.panel}`}>
-      <h3 className={`text-lg font-semibold ${styles.text}`}>{mode === "login" ? "Sign in" : "Create account"}</h3>
+    <form onSubmit={submit} className={styles.form}>
+      <h3 className={styles.title}>{mode === "login" ? "Sign in" : "Create account"}</h3>
       <div>
         <label className={styles.label}>Email</label>
         <input value={email} onChange={e=>setEmail(e.target.value)} className={styles.input} />
@@ -49,8 +49,8 @@ export default function AuthForm({ mode = "login" }: { mode?: "login" | "signup"
         <label className={styles.label}>Password</label>
         <input type="password" value={password} onChange={e=>setPassword(e.target.value)} className={styles.input} />
       </div>
-      {error && <div className="text-sm text-red-300">{error}</div>}
-      <div className="flex justify-end">
+      {error && <div className={styles.error}>{error}</div>}
+      <div className={styles.formActions}>
         <button type="submit" className={styles.btn}>{mode === "login" ? "Sign in" : "Sign up"}</button>
       </div>
     </form>
