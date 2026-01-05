@@ -95,3 +95,28 @@
 .logoutBtn:active {
   transform: scale(0.98);
 }
+
+.pageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pageTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #e6e9ff;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #e6e9ff;
+}
+
+.loadingSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

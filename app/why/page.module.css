@@ -6,6 +6,23 @@
   color: var(--muted);
 }
 
+.pageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pageTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.pageDescription {
+  font-size: 1.125rem;
+  color: var(--muted);
+}
+
 .section {
   margin-top: 2rem;
 }

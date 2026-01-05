@@ -22,7 +22,7 @@ export default function AccountPage() {
 
   if (status === "loading") {
     return (
-      <section className={`space-y-6 ${styles.textMain}`}>
+      <section className={styles.loadingSection}>
         <p className={styles.textMuted}>Loading...</p>
       </section>
     );
@@ -30,9 +30,9 @@ export default function AccountPage() {
 
   if (!session?.user) {
     return (
-      <section className={`space-y-6 ${styles.textMain}`}>
-        <h1 className="text-3xl font-bold">Account</h1>
-        <p className={styles.textMuted}>You are not signed in. <a href="/auth" className="underline">Sign in here</a></p>
+      <section className={styles.pageSection}>
+        <h1 className={styles.pageTitle}>Account</h1>
+        <p className={styles.textMuted}>You are not signed in. <a href="/auth">Sign in here</a></p>
       </section>
     );
   }
@@ -40,13 +40,13 @@ export default function AccountPage() {
   const isInstructor = INSTRUCTOR_EMAILS.includes(session.user.email || "");
 
   return (
-    <section className={`space-y-6 ${styles.textMain}`}>
-      <h1 className="text-3xl font-bold">Your Account</h1>
+    <section className={styles.pageSection}>
+      <h1 className={styles.pageTitle}>Your Account</h1>
 
       <div className={styles.panel}>
-        <h2 className="text-xl font-semibold mb-4">Account Information</h2>
+        <h2 className={styles.sectionTitle}>Account Information</h2>
         
-        <div className={`space-y-4 ${styles.info}`}>
+        <div className={styles.info}>
           <div>
             <p className={styles.label}>Email</p>
             <p className={styles.value}>{session.user.email}</p>

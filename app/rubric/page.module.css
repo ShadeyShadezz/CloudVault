@@ -6,6 +6,30 @@
   color: var(--muted);
 }
 
+.deniedSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pageTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #e6e9ff;
+}
+
+.pageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mainTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
 .section {
   background: rgba(24, 10, 36, 0.4);
   border-left: 4px solid #5aa6ff;

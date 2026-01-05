@@ -60,9 +60,9 @@ export default function ProductPage() {
 
   if (status === 'unauthenticated') {
     return (
-      <section className={`space-y-6 ${styles.textMain}`}>
-        <h1 className="text-3xl font-bold">Access Denied</h1>
-        <p className={styles.textMuted}>Please <a href="/auth" className="underline">sign in</a> to access your vault.</p>
+      <section className={styles.deniedSection}>
+        <h1 className={styles.deniedTitle}>Access Denied</h1>
+        <p className={styles.deniedText}>Please <a href="/auth" className={styles.deniedLink}>sign in</a> to access your vault.</p>
       </section>
     );
   }
@@ -287,7 +287,7 @@ export default function ProductPage() {
         </aside>
 
         <main className={styles.mainContent}>
-          {error && <div className={`p-3 rounded text-red-400 bg-red-950 bg-opacity-30 mb-6`}>{error}</div>}
+          {error && <div className={styles.errorMessage}>{error}</div>}
 
           <div className={styles.uploadSection}>
             <h2 className={styles.uploadTitle}>Upload Files</h2>

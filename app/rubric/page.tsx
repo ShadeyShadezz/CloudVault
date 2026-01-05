@@ -26,18 +26,18 @@ export default function RubricPage() {
 
   if (!session?.user?.email || !INSTRUCTOR_EMAILS.includes(session.user.email)) {
     return (
-      <section className={`space-y-6 ${styles.textMain}`}>
-        <h1 className="text-3xl font-bold">Rubric Evidence</h1>
+      <section className={styles.deniedSection}>
+        <h1 className={styles.pageTitle}>Rubric Evidence</h1>
         <p className={styles.textMuted}>You must be signed in as an instructor to view this page.</p>
-        <p className={styles.textMuted}>Please <a href="/auth" className="underline">sign in</a> with an instructor account.</p>
+        <p className={styles.textMuted}>Please <a href="/auth">sign in</a> with an instructor account.</p>
       </section>
     );
   }
 
   return (
-    <section className={`space-y-8 ${styles.textMain}`}>
+    <section className={styles.pageSection}>
       <div>
-        <h1 className="text-4xl font-bold mb-2">Rubric Evidence Page</h1>
+        <h1 className={styles.mainTitle}>Rubric Evidence Page</h1>
         <p className={styles.textMuted}>This page helps instructors quickly find where you meet the CCC requirements.</p>
       </div>
 

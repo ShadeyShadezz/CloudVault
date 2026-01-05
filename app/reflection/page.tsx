@@ -26,17 +26,17 @@ export default function ReflectionPage(){
 
   if (!session?.user?.email || !INSTRUCTOR_EMAILS.includes(session.user.email)) {
     return (
-      <section className={`space-y-6 ${styles.textMain}`}>
-        <h1 className="text-3xl font-bold">Reflection</h1>
-        <p className={styles.textMuted}>You must be signed in as an instructor to view this page. <a href="/auth" className="underline">Sign in</a></p>
+      <section className={styles.deniedSection}>
+        <h1 className={styles.pageTitle}>Reflection</h1>
+        <p className={styles.textMuted}>You must be signed in as an instructor to view this page. <a href="/auth">Sign in</a></p>
       </section>
     );
   }
 
   return (
-    <section className={`space-y-8 ${styles.textMain}`}>
+    <section className={styles.pageSection}>
       <div>
-        <h1 className="text-4xl font-bold mb-2">Project Reflection</h1>
+        <h1 className={styles.mainTitle}>Project Reflection</h1>
         <p className={styles.textMuted}>Self-assessment of CloudVault development and future direction.</p>
       </div>
 

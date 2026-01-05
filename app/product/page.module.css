@@ -743,3 +743,33 @@
   margin-top: 0.5rem;
   letter-spacing: 0.5px;
 }
+
+.deniedSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.deniedTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #e6e9ff;
+  margin: 0;
+}
+
+.deniedText {
+  color: var(--muted);
+  margin: 0;
+}
+
+.deniedLink {
+  text-decoration: underline;
+}
+
+.errorMessage {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  color: #f87171;
+  background: rgba(127, 29, 29, 0.3);
+  margin-bottom: 1.5rem;
+}

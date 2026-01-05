@@ -5,3 +5,27 @@
 .textMuted {
   color: var(--muted);
 }
+
+.pageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pageTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #e6e9ff;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e6e9ff;
+}
+
+.subSectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e6e9ff;
+}

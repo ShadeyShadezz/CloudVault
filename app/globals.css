@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Nighttime theme variables for CloudVault */
 :root {
   --night-deep: #0b0220; /* very dark purple */
@@ -10,6 +6,8 @@
   --star-yellow: #ffd86b; /* star accent */
   --panel: rgba(20,10,30,0.6);
   --muted: #9aa0c6;
+  --font-geist-sans: system-ui, -apple-system, sans-serif;
+  --font-geist-mono: 'Courier New', monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,13 +16,24 @@
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: radial-gradient(ellipse at top left, rgba(90,166,255,0.04), transparent 20%), var(--night-deep);
   color: var(--star-yellow);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 /* Component-level styles moved to CSS Modules next to their components/pages. */
-
-/* small decorative clouds using pseudo-elements can be added per section in components */
 
