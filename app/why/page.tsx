@@ -17,7 +17,7 @@ export default function WhyPage() {
           </div>
 
           <div className={styles.featureCard}>
-            <h3 className={`text-xl font-semibold mb-2 ${styles.featureTitle}`}>AI-Powered Organization</h3>
+            <h3 className={styles.featureTitle}>AI-Powered Organization</h3>
             <p className={styles.textMuted}>Our AI automatically tags and categorizes your files by content, type, and context. No more manual folder organization or forgotten file locations.</p>
           </div>
 

@@ -297,7 +297,7 @@ export default function ProductPage() {
               <span className={styles.uploadText}>Click to browse or drag files</span>
               <input onChange={handle} type="file" className={styles.fileInput} />
             </label>
-            {loading && <div className={`mt-3 ${styles.textMuted}`}>Uploading...</div>}
+            {loading && <div className={styles.loadingText}>Uploading...</div>}
           </div>
 
           <div className={styles.filesSection}>

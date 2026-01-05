@@ -41,6 +41,13 @@
   color: #ffd86b;
 }
 
+.sectionTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffd86b;
+}
+
 .evidence {
   margin-bottom: 1.5rem;
 }
@@ -50,6 +57,22 @@
 }
 
 .subheading {
+  color: #5aa6ff;
+}
+
+.evidenceTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #5aa6ff;
+}
+
+.evidenceLink {
+  color: #e6e9ff;
+  text-decoration: underline;
+}
+
+.evidenceLink:hover {
   color: #5aa6ff;
 }
 
@@ -81,6 +104,13 @@
 }
 
 .navTitle {
+  color: #ffd86b;
+}
+
+.navMainTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
   color: #ffd86b;
 }
 

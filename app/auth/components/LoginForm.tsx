@@ -32,9 +32,9 @@ export default function LoginForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className={`mx-auto max-w-md space-y-4 ${styles.panel}`}>
-      <h3 className={`text-lg font-semibold ${styles.text}`}>Sign in</h3>
-      {error && <div className={`text-sm ${styles.error}`}>{error}</div>}
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <h3 className={styles.title}>Sign in</h3>
+      {error && <div className={styles.error}>{error}</div>}
       
       <div>
         <label className={styles.label}>Email</label>
@@ -58,7 +58,7 @@ export default function LoginForm() {
         />
       </div>
       
-      <div className="flex justify-end">
+      <div className={styles.formActions}>
         <button 
           type="submit" 
           className={styles.btn}

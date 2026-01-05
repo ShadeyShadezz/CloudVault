@@ -63,6 +63,34 @@
   color: #ffd86b;
 }
 
+.sectionHeading {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #5aa6ff;
+}
+
+.sectionHeadingNegative {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ff8c8c;
+}
+
+.sectionHeadingFuture {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffd86b;
+}
+
+.summaryHeading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #ffd86b;
+}
+
 .buildList {
   list-style: none;
   padding: 0;

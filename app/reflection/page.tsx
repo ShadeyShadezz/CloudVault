@@ -42,7 +42,7 @@ export default function ReflectionPage(){
 
       <div className={styles.reflectionBox}>
         <div className={styles.reflectionIcon}>✓</div>
-        <h2 className={`text-2xl font-bold mb-4 ${styles.positive}`}>What Went Well</h2>
+        <h2 className={styles.sectionHeading}>What Went Well</h2>
         <p className={styles.textMuted}>
           Built a consistent UI, navigation and a demo product flow for client-side uploads. 
           Established clear architectural patterns and maintainable code structure.
@@ -51,7 +51,7 @@ export default function ReflectionPage(){
 
       <div className={styles.reflectionBox}>
         <div className={`${styles.reflectionIcon} ${styles.negative}`}>⚠</div>
-        <h2 className={`text-2xl font-bold mb-4 ${styles.negative}`}>What Didn't Go Well / Challenges</h2>
+        <h2 className={styles.sectionHeadingNegative}>What Didn't Go Well / Challenges</h2>
         <p className={styles.textMuted}>
           Storing very large files client-side is limited; server-side storage and streaming are needed for production. 
           Scalability is a significant constraint without proper backend infrastructure.
@@ -60,8 +60,8 @@ export default function ReflectionPage(){
 
       <div className={styles.reflectionBox}>
         <div className={styles.reflectionIcon}>→</div>
-        <h2 className={`text-2xl font-bold mb-4 ${styles.future}`}>What I'd Build Next</h2>
-        <ul className={`${styles.buildList} ${styles.textMuted}`}>
+        <h2 className={styles.sectionHeadingFuture}>What I'd Build Next</h2>
+        <ul className={styles.buildList}>
           <li>
             <strong>Server-backed storage (S3)</strong> with metadata DB
             <span className={styles.description}> — Enable scalable file handling and persistent storage</span>
@@ -78,8 +78,8 @@ export default function ReflectionPage(){
       </div>
 
       <div className={styles.summaryBox}>
-        <h2 className={`text-lg font-semibold mb-3 ${styles.future}`}>Key Takeaways</h2>
-        <ul className={`${styles.takeawayList} ${styles.textMuted}`}>
+        <h2 className={styles.summaryHeading}>Key Takeaways</h2>
+        <ul className={styles.takeawayList}>
           <li>Full-stack architecture is essential for file-handling applications</li>
           <li>User experience consistency drives engagement</li>
           <li>MVP scope with clear future roadmap enables iterative improvement</li>

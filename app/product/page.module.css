@@ -428,6 +428,12 @@
   color: var(--muted);
 }
 
+.loadingText {
+  color: var(--muted);
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
 .filesSection {
   min-height: 300px;
 }

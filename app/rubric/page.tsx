@@ -42,19 +42,19 @@ export default function RubricPage() {
       </div>
 
       <div className={styles.section}>
-        <h2 className={`text-2xl font-bold mb-6 ${styles.cccTitle}`}>CCC.1.1 - Problem Understanding</h2>
+        <h2 className={styles.sectionTitle}>CCC.1.1 - Problem Understanding</h2>
         
         <div className={styles.evidence}>
-          <h3 className={`text-lg font-semibold mb-3 ${styles.subheading}`}>Where to Find Evidence:</h3>
-          <ul className={`${styles.evidenceList} ${styles.textMuted}`}>
-            <li>See <a href="/about" className={`${styles.textMain} underline`}>About page</a> for problem summary and user needs</li>
+          <h3 className={styles.evidenceTitle}>Where to Find Evidence:</h3>
+          <ul className={styles.evidenceList}>
+            <li>See <a href="/about" className={styles.evidenceLink}>About page</a> for problem summary and user needs</li>
             <li>README section 2 for detailed problem statement</li>
           </ul>
         </div>
 
         <div className={styles.evidence}>
-          <h3 className={`text-lg font-semibold mb-3 ${styles.subheading}`}>Key Evidence Includes:</h3>
-          <ul className={`${styles.evidenceList} ${styles.textMuted}`}>
+          <h3 className={styles.evidenceTitle}>Key Evidence Includes:</h3>
+          <ul className={styles.evidenceList}>
             <li>File storage fragmentation across platforms</li>
             <li>Need for unified organization of mixed media</li>
             <li>Student and creator workflow challenges</li>
@@ -63,20 +63,20 @@ export default function RubricPage() {
       </div>
 
       <div className={styles.section}>
-        <h2 className={`text-2xl font-bold mb-6 ${styles.cccTitle}`}>CCC.1.2 - Solution Planning & Design</h2>
+        <h2 className={styles.sectionTitle}>CCC.1.2 - Solution Planning & Design</h2>
         
         <div className={styles.evidence}>
-          <h3 className={`text-lg font-semibold mb-3 ${styles.subheading}`}>Where to Find Evidence:</h3>
-          <ul className={`${styles.evidenceList} ${styles.textMuted}`}>
-            <li>See <a href="/why" className={`${styles.textMain} underline`}>Why page</a> for solution overview</li>
+          <h3 className={styles.evidenceTitle}>Where to Find Evidence:</h3>
+          <ul className={styles.evidenceList}>
+            <li>See <a href="/why" className={styles.evidenceLink}>Why page</a> for solution overview</li>
             <li>project-plan.md in repo for detailed planning</li>
             <li>Wireframes in public/wireframes directory</li>
           </ul>
         </div>
 
         <div className={styles.evidence}>
-          <h3 className={`text-lg font-semibold mb-3 ${styles.subheading}`}>Key Evidence Includes:</h3>
-          <ul className={`${styles.evidenceList} ${styles.textMuted}`}>
+          <h3 className={styles.evidenceTitle}>Key Evidence Includes:</h3>
+          <ul className={styles.evidenceList}>
             <li>Unified tagging and categorization across file types</li>
             <li>Import/export flows for portfolios and submissions</li>
             <li>AI-assisted search (planned)</li>
@@ -85,20 +85,20 @@ export default function RubricPage() {
       </div>
 
       <div className={styles.section}>
-        <h2 className={`text-2xl font-bold mb-6 ${styles.cccTitle}`}>CCC.1.3 - Working Implementation</h2>
+        <h2 className={styles.sectionTitle}>CCC.1.3 - Working Implementation</h2>
         
         <div className={styles.evidence}>
-          <h3 className={`text-lg font-semibold mb-3 ${styles.subheading}`}>Where to Find Evidence:</h3>
-          <ul className={`${styles.evidenceList} ${styles.textMuted}`}>
-            <li>See <a href="/features" className={`${styles.textMain} underline`}>Features page</a> for core functionality</li>
-            <li>Visit <a href="/product" className={`${styles.textMain} underline`}>Product page</a> for working demo</li>
+          <h3 className={styles.evidenceTitle}>Where to Find Evidence:</h3>
+          <ul className={styles.evidenceList}>
+            <li>See <a href="/features" className={styles.evidenceLink}>Features page</a> for core functionality</li>
+            <li>Visit <a href="/product" className={styles.evidenceLink}>Product page</a> for working demo</li>
             <li>GitHub repo for codebase and implementation</li>
           </ul>
         </div>
 
         <div className={styles.evidence}>
-          <h3 className={`text-lg font-semibold mb-3 ${styles.subheading}`}>Key Evidence Includes:</h3>
-          <ul className={`${styles.evidenceList} ${styles.textMuted}`}>
+          <h3 className={styles.evidenceTitle}>Key Evidence Includes:</h3>
+          <ul className={styles.evidenceList}>
             <li>Universal file upload and storage functionality</li>
             <li>Client-side file management and download</li>
             <li>Responsive UI with consistent design</li>
@@ -108,8 +108,8 @@ export default function RubricPage() {
       </div>
 
       <div className={styles.quickNav}>
-        <h2 className={`text-2xl font-bold mb-4 ${styles.navTitle}`}>Quick Navigation to Evidence</h2>
-        <div className={`grid gap-4 ${styles.navGrid}`}>
+        <h2 className={styles.navMainTitle}>Quick Navigation to Evidence</h2>
+        <div className={styles.navGrid}>
           <a href="/about" className={styles.navLink}>Instructor Access</a>
           <a href="/why" className={styles.navLink}>Solution Overview</a>
           <a href="/features" className={styles.navLink}>Core Features</a>
